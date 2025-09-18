@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "采集器上位机", "采集器上位机.vcxproj", "{0E7C64B2-81CD-49ED-A74B-774AF49AEAEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E7C64B2-81CD-49ED-A74B-774AF49AEAEE}.Debug|x64.ActiveCfg = Debug|x64
+		{0E7C64B2-81CD-49ED-A74B-774AF49AEAEE}.Debug|x64.Build.0 = Debug|x64
+		{0E7C64B2-81CD-49ED-A74B-774AF49AEAEE}.Release|x64.ActiveCfg = Release|x64
+		{0E7C64B2-81CD-49ED-A74B-774AF49AEAEE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02B01474-7D2F-4A78-95C4-7930804F33C4}
+	EndGlobalSection
+EndGlobal

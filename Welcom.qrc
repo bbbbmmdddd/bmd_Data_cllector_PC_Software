@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="Welcom">
+    <file>rj45(1).png</file>
+    <file>rj45.png</file>
+    <file>153_Black_Sea.png</file>
+    <file>screen.png</file>
+  </qresource>
+</RCC>
