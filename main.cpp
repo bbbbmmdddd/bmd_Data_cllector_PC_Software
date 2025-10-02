@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     splash.show();
     QThread::msleep(1500);
     Welcom w;
+    //w.setWindowTitle("");
     w.show();
     splash.finish(&w);
     return a.exec();
