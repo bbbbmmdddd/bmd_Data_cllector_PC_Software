@@ -1,10 +1,12 @@
 #include "Welcom.h"
 #include <QDebug>
+#include "choose.h"
 
 Welcom::Welcom(QWidget *parent)
     : QWidget(parent)
 {
     ui.setupUi(this);
+	this->ppage2 = new Choose;
 }
 
 Welcom::~Welcom()
@@ -26,4 +28,6 @@ void Welcom::pushButton_Enter() {
     qDebug() << "pushButton_Enter";
     QString Change_text = ui.comboBox->currentText();
     qDebug() << "Enter_Model_Number:" << Change_text;
+	this->hide();
+	this->ppage2->show();
 }

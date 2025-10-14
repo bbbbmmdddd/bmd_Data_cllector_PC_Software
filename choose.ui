@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Choose</class>
+ <widget class="QWidget" name="Choose">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1470</width>
+    <height>1027</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1470</width>
+    <height>1027</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1470</width>
+    <height>1027</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Choose</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>-40</x>
+     <y>-10</y>
+     <width>1511</width>
+     <height>1041</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1511</width>
+     <height>1041</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#widget
+{
+	
+	border-image: url(:/Welcom/153_Black_Sea.png);
+}</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Welcom.qrc"/>
+ </resources>
+ <connections/>
+</ui>

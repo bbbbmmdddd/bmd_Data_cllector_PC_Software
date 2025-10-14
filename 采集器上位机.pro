@@ -13,3 +13,22 @@ OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
 include(采集器上位机.pri)
+
+DISTFILES += \
+    采集器上位机.pri
+
+RESOURCES += \
+    Welcom.qrc
+
+FORMS += \
+    Welcom.ui \
+    choose.ui
+
+HEADERS += \
+    Welcom.h \
+    choose.h
+
+SOURCES += \
+    Welcom.cpp \
+    choose.cpp \
+    main.cpp

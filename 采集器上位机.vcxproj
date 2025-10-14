@@ -84,13 +84,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="Welcom.qrc" />
+    <QtUic Include="choose.ui" />
     <QtUic Include="Welcom.ui" />
     <QtMoc Include="Welcom.h" />
+    <ClCompile Include="choose.cpp" />
     <ClCompile Include="Welcom.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="采集器上位机.pro" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="choose.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
