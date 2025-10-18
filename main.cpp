@@ -1,8 +1,8 @@
 #include "Welcom.h"
 #include <QtWidgets/QApplication>
-#include <Qpixmap.h>
-#include <QSplashScreen.h>
-#include <qthread.h>
+#include <QPixmap>
+#include <QSplashScreen>
+#include <QThread>
 
 
 int main(int argc, char *argv[])

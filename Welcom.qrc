@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="Welcom">
+    <file>background.jpg</file>
+    <file>I.png</file>
     <file>Modularization_Data_Collector.png</file>
     <file>Easy_data_cllected_card.png</file>
     <file>rj45(1).png</file>

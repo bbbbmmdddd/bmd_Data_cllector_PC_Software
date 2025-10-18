@@ -11,6 +11,7 @@ Welcom::Welcom(QWidget *parent)
 
 Welcom::~Welcom()
 {
+	delete ppage2;
 }
 
 void Welcom::comboBox_change() {
@@ -25,7 +26,7 @@ void Welcom::comboBox_change() {
 }
 
 void Welcom::pushButton_Enter() {
-    qDebug() << "pushButton_Enter";
+    qDebug() << "pushButton_Enter();";
     QString Change_text = ui.comboBox->currentText();
     qDebug() << "Enter_Model_Number:" << Change_text;
 	this->hide();

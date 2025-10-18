@@ -31,7 +31,7 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>-40</x>
+     <x>-10</x>
      <y>-10</y>
      <width>1511</width>
      <height>1041</height>
@@ -50,10 +50,43 @@
 	border-image: url(:/Welcom/153_Black_Sea.png);
 }</string>
    </property>
+   <widget class="QPushButton" name="pushButton_DataTest">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>330</y>
+      <width>421</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据处理测试</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
   <include location="Welcom.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_DataTest</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>pushButton_DataTest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>735</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1586</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pushButton_DataTest()</slot>
+ </slots>
 </ui>

@@ -43,19 +43,29 @@
     <ClCompile Include="choose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="dataprocessing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="采集器上位机.pro">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="choose.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="dataprocessing.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="choose.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="dataprocessing.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

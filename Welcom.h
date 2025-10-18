@@ -11,7 +11,8 @@ class Welcom : public QWidget
 public:
     Welcom(QWidget *parent = nullptr);
     ~Welcom();
-    Choose* ppage2=NULL;
+    Choose* ppage2 = NULL;
+
 private slots:
     void comboBox_change();
     void pushButton_Enter();
