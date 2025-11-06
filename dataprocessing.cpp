@@ -154,6 +154,26 @@ void DataProcessing::Chart_init() {
 	ui->chartView->setRenderHint(QPainter::Antialiasing);
 }
 
+void DataProcessing::calculation() {
+	qDebug() << "calculation();";
+    QFont font2;
+    font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+    font2.setPointSize(27);
+    //font2.setBold(false);
+    //font2.setKerning(true);
+    ui->label_TotalImpulse->setFont(font2);
+    //ui.label_serialConnection->setStyleSheet("color:red;");
+    const double dt = 1.0 / 200.0;
+    double totalImpulse = 0.0;
+
+    for (int i = 1; i < 939; i++) {
+        double avgThrust = (myArray[i] + myArray[i - 1]) * 0.5;
+        totalImpulse += avgThrust * dt;
+    }
+
+    ui->label_TotalImpulse->setText(QString::number(totalImpulse, 'f', 4));
+}
+
 void DataProcessing::outFile() {
     qDebug() << "outFile();";
     QXlsx::Document xlsx("Template.xlsx");

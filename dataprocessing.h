@@ -29,6 +29,7 @@ public:
 private slots:
     void Chart_init();
     void outFile();
+    void calculation();
 
 private:
     Ui::DataProcessing *ui;
