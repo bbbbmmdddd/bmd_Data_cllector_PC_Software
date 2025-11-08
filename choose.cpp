@@ -18,7 +18,8 @@ Choose::~Choose()
 
 void Choose::pushButton_DataTest()
 {
-	qDebug() << "DataTest();";
+	qDebug() << "\nDataTest(){";
     this->hide();
     this->ppage3->show();
+    qDebug() << "}";
 }

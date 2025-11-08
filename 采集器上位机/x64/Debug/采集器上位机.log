@@ -1,4 +1,4 @@
-﻿生成启动时间为 2025/11/6 22:48:13。
+﻿生成启动时间为 2025/11/8 20:19:20。
 日志记录详细程度设置为: Normal。     1>项目“D:\采集器上位机\采集器上位机\采集器上位机.vcxproj”在节点 2 上(Build 个目标)。
      1>PrepareForBuild:
          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
@@ -42,15 +42,13 @@
        QtMoc:
        正在跳过目标“QtMoc”，因为所有输出文件相对于输入文件而言都是最新的。
        ClCompile:
-         D:\Microsoft Visual Studio\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64\CL.exe /c /I"采集器上位机\x64\Debug\uic" /I"采集器上位机\x64\Debug\moc" /I"D:\采集器上位机\采集器上位机\packages\SARibbonBar.1.0.1\build\native\include" /I"D:\采集器上位机\采集器上位机\QXlsx\source" /I"D:\采集器上位机\采集器上位机\QXlsx\header" /IC:\Users\Admin\AppData\Local\Temp\kydfeqra.x2l /ID:\QT\6.8.3\msvc2022_64\include /ID:\QT\6.8.3\msvc2022_64\include\QtCharts /ID:\QT\6.8.3\msvc2022_64\include\QtOpenGLWidgets /ID:\QT\6.8.3\msvc2022_64\include\QtWidgets /ID:\QT\6.8.3\msvc2022_64\include\QtOpenGL /ID:\QT\6.8.3\msvc2022_64\include\QtGui /ID:\QT\6.8.3\msvc2022_64\include\QtCore /IC:\Users\Admin\AppData\Local\Temp\kydfeqra.x2l /I/include /I"D:\QT\6.8.3\msvc2022_64\mkspecs\win32-msvc" /I"采集器上位机\x64\Debug\moc" /I"采集器上位机\x64\Debug\uic" /Zi /nologo /W1 /WX- /diagnostics:column /MP /Od /D _WINDOWS /D UNICODE /D _UNICODE /D WIN32 /D _ENABLE_EXTENDED_ALIGNED_STORAGE /D WIN64 /D QT_CHARTS_LIB /D QT_OPENGLWIDGETS_LIB /D QT_WIDGETS_LIB /D QT_OPENGL_LIB /D QT_GUI_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"采集器上位机\x64\Debug\\" /Fd"采集器上位机\x64\Debug\vc143.pdb" /external:W1 /Gd /TP /FC /errorReport:prompt -Zc:rvalueCast -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 dataprocessing.cpp
+         D:\Microsoft Visual Studio\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64\CL.exe /c /I"采集器上位机\x64\Debug\uic" /I"采集器上位机\x64\Debug\moc" /I"D:\采集器上位机\采集器上位机\packages\SARibbonBar.1.0.1\build\native\include" /I"D:\采集器上位机\采集器上位机\QXlsx\source" /I"D:\采集器上位机\采集器上位机\QXlsx\header" /IC:\Users\Admin\AppData\Local\Temp\alololwy.2qm /ID:\QT\6.8.3\msvc2022_64\include /ID:\QT\6.8.3\msvc2022_64\include\QtCharts /ID:\QT\6.8.3\msvc2022_64\include\QtOpenGLWidgets /ID:\QT\6.8.3\msvc2022_64\include\QtWebEngineWidgets /ID:\QT\6.8.3\msvc2022_64\include\QtPrintSupport /ID:\QT\6.8.3\msvc2022_64\include\QtWidgets /ID:\QT\6.8.3\msvc2022_64\include\QtWebEngineCore /ID:\QT\6.8.3\msvc2022_64\include\QtQuick /ID:\QT\6.8.3\msvc2022_64\include\QtOpenGL /ID:\QT\6.8.3\msvc2022_64\include\QtGui /ID:\QT\6.8.3\msvc2022_64\include\QtQmlMeta /ID:\QT\6.8.3\msvc2022_64\include\QtQmlModels /ID:\QT\6.8.3\msvc2022_64\include\QtQmlWorkerScript /ID:\QT\6.8.3\msvc2022_64\include\QtWebChannel /ID:\QT\6.8.3\msvc2022_64\include\QtQml /ID:\QT\6.8.3\msvc2022_64\include\QtNetwork /ID:\QT\6.8.3\msvc2022_64\include\QtQmlIntegration /ID:\QT\6.8.3\msvc2022_64\include\QtPositioning /ID:\QT\6.8.3\msvc2022_64\include\QtCore /IC:\Users\Admin\AppData\Local\Temp\alololwy.2qm /I/include /I"D:\QT\6.8.3\msvc2022_64\mkspecs\win32-msvc" /I"采集器上位机\x64\Debug\moc" /I"采集器上位机\x64\Debug\uic" /Zi /nologo /W1 /WX- /diagnostics:column /MP /Od /D _WINDOWS /D UNICODE /D _UNICODE /D WIN32 /D _ENABLE_EXTENDED_ALIGNED_STORAGE /D WIN64 /D QT_CHARTS_LIB /D QT_OPENGLWIDGETS_LIB /D QT_WEBENGINEWIDGETS_LIB /D QT_PRINTSUPPORT_LIB /D QT_WIDGETS_LIB /D QT_WEBENGINECORE_LIB /D QT_QUICK_LIB /D QT_OPENGL_LIB /D QT_GUI_LIB /D QT_QMLMETA_LIB /D QT_QMLMODELS_LIB /D QT_QMLWORKERSCRIPT_LIB /D QT_WEBCHANNEL_LIB /D QT_QML_LIB /D QT_NETWORK_LIB /D QT_QMLINTEGRATION_LIB /D QT_POSITIONING_LIB /D QT_CORE_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++17 /Fo"采集器上位机\x64\Debug\\" /Fd"采集器上位机\x64\Debug\vc143.pdb" /external:W1 /Gd /TP /FC /errorReport:prompt -Zc:rvalueCast -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8 dataprocessing.cpp
          dataprocessing.cpp
-     1>D:\采集器上位机\采集器上位机\dataprocessing.cpp(1,1): warning C4828: 文件包含在偏移 0x197a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-     1>D:\采集器上位机\采集器上位机\dataprocessing.cpp(1,1): warning C4828: 文件包含在偏移 0x197b 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
          所有输出均为最新。
        QtNatvis:
        正在跳过目标“QtNatvis”，因为所有输出文件相对于输入文件而言都是最新的。
        Link:
-         D:\Microsoft Visual Studio\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.exe" /NOLOGO /LIBPATH:"D:\采集器上位机\采集器上位机\packages\SARibbonBar.1.0.1\build\native\lib\win64\debug" /LIBPATH:"D:\采集器上位机\采集器上位机\QXlsx\build\Desktop_Qt_6_8_3_MSVC2022_64bit-Debug\debug" SARibbonBar.lib QXlsx.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Chartsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Guid.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Cored.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib shell32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.lib" /MACHINE:X64 /NATVIS:"采集器上位机\x64\Debug\\qt.natvis" "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" "采集器上位机\x64\Debug\choose.obj"
+         D:\Microsoft Visual Studio\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.exe" /NOLOGO /LIBPATH:"D:\采集器上位机\采集器上位机\packages\SARibbonBar.1.0.1\build\native\lib\win64\debug" /LIBPATH:"D:\采集器上位机\采集器上位机\QXlsx\build\Desktop_Qt_6_8_3_MSVC2022_64bit-Debug\debug" SARibbonBar.lib QXlsx.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Chartsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineWidgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6PrintSupportd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineCored.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Quickd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Guid.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlMetad.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlModelsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlWorkerScriptd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebChanneld.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Qmld.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Networkd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Positioningd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Cored.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib shell32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.lib" /MACHINE:X64 /NATVIS:"采集器上位机\x64\Debug\\qt.natvis" "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" "采集器上位机\x64\Debug\choose.obj"
          "采集器上位机\x64\Debug\dataprocessing.obj"
          "采集器上位机\x64\Debug\Welcom.obj"
          "采集器上位机\x64\Debug\main.obj"
@@ -67,13 +65,7 @@
      1>已完成生成项目“D:\采集器上位机\采集器上位机\采集器上位机.vcxproj”(Build 个目标)的操作。
 
 已成功生成。
-
-       “D:\采集器上位机\采集器上位机\采集器上位机.vcxproj”(Build 目标) (1) ->
-       (ClCompile 目标) -> 
-         D:\采集器上位机\采集器上位机\dataprocessing.cpp(1,1): warning C4828: 文件包含在偏移 0x197a 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-         D:\采集器上位机\采集器上位机\dataprocessing.cpp(1,1): warning C4828: 文件包含在偏移 0x197b 处开始的字符，该字符在当前源字符集中无效(代码页 65001)。
-
-    2 个警告
+    0 个警告
     0 个错误
 
-已用时间 00:00:02.76
+已用时间 00:00:02.70

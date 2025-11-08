@@ -1,11 +1,11 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-<Qt_DEFINES_>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_CHARTS_LIB;QT_OPENGLWIDGETS_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB</Qt_DEFINES_>
-<Qt_INCLUDEPATH_>C:\Users\Admin\AppData\Local\Temp\kydfeqra.x2l;D:\QT\6.8.3\msvc2022_64\include;D:\QT\6.8.3\msvc2022_64\include\QtCharts;D:\QT\6.8.3\msvc2022_64\include\QtOpenGLWidgets;D:\QT\6.8.3\msvc2022_64\include\QtWidgets;D:\QT\6.8.3\msvc2022_64\include\QtOpenGL;D:\QT\6.8.3\msvc2022_64\include\QtGui;D:\QT\6.8.3\msvc2022_64\include\QtCore;C:\Users\Admin\AppData\Local\Temp\kydfeqra.x2l;/include;D:\QT\6.8.3\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
+<Qt_DEFINES_>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_CHARTS_LIB;QT_OPENGLWIDGETS_LIB;QT_WEBENGINEWIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_QMLMETA_LIB;QT_QMLMODELS_LIB;QT_QMLWORKERSCRIPT_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_NETWORK_LIB;QT_QMLINTEGRATION_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Qt_DEFINES_>
+<Qt_INCLUDEPATH_>C:\Users\Admin\AppData\Local\Temp\alololwy.2qm;D:\QT\6.8.3\msvc2022_64\include;D:\QT\6.8.3\msvc2022_64\include\QtCharts;D:\QT\6.8.3\msvc2022_64\include\QtOpenGLWidgets;D:\QT\6.8.3\msvc2022_64\include\QtWebEngineWidgets;D:\QT\6.8.3\msvc2022_64\include\QtPrintSupport;D:\QT\6.8.3\msvc2022_64\include\QtWidgets;D:\QT\6.8.3\msvc2022_64\include\QtWebEngineCore;D:\QT\6.8.3\msvc2022_64\include\QtQuick;D:\QT\6.8.3\msvc2022_64\include\QtOpenGL;D:\QT\6.8.3\msvc2022_64\include\QtGui;D:\QT\6.8.3\msvc2022_64\include\QtQmlMeta;D:\QT\6.8.3\msvc2022_64\include\QtQmlModels;D:\QT\6.8.3\msvc2022_64\include\QtQmlWorkerScript;D:\QT\6.8.3\msvc2022_64\include\QtWebChannel;D:\QT\6.8.3\msvc2022_64\include\QtQml;D:\QT\6.8.3\msvc2022_64\include\QtNetwork;D:\QT\6.8.3\msvc2022_64\include\QtQmlIntegration;D:\QT\6.8.3\msvc2022_64\include\QtPositioning;D:\QT\6.8.3\msvc2022_64\include\QtCore;C:\Users\Admin\AppData\Local\Temp\alololwy.2qm;/include;D:\QT\6.8.3\msvc2022_64\mkspecs\win32-msvc</Qt_INCLUDEPATH_>
 <Qt_STDCPP_>stdcpp17</Qt_STDCPP_>
 <Qt_RUNTIME_>MultiThreadedDebugDLL</Qt_RUNTIME_>
 <Qt_CL_OPTIONS_>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -utf-8</Qt_CL_OPTIONS_>
-<Qt_LIBS_>D:\QT\6.8.3\msvc2022_64\lib\Qt6Chartsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Guid.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Cored.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib;shell32.lib</Qt_LIBS_>
+<Qt_LIBS_>D:\QT\6.8.3\msvc2022_64\lib\Qt6Chartsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineWidgetsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6PrintSupportd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineCored.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Quickd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Guid.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlMetad.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlModelsd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlWorkerScriptd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6WebChanneld.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Qmld.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Networkd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Positioningd.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6Cored.lib;D:\QT\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib;shell32.lib</Qt_LIBS_>
 <Qt_LINK_OPTIONS_>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"</Qt_LINK_OPTIONS_>
 <QMake_QT_SYSROOT_></QMake_QT_SYSROOT_>
 <QMake_QT_INSTALL_PREFIX_>D:/QT/6.8.3/msvc2022_64</QMake_QT_INSTALL_PREFIX_>
@@ -37,7 +37,7 @@
     <QtBkup_QtInstall
       >6.8.3_msvc2022_64</QtBkup_QtInstall>
     <QtBkup_QtModules
-      >core;gui;widgets;charts</QtBkup_QtModules>
+      >core;gui;widgets;charts;webenginewidgets</QtBkup_QtModules>
     <QtBkup_QtPathBinaries
       >bin</QtBkup_QtPathBinaries>
     <QtBkup_QtPathLibraryExecutables

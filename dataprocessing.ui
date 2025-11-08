@@ -33,7 +33,7 @@
   <widget class="QWidget" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>1</x>
      <y>0</y>
      <width>1801</width>
      <height>1081</height>
@@ -56,7 +56,7 @@
       <x>430</x>
       <y>20</y>
       <width>1341</width>
-      <height>741</height>
+      <height>751</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -66,12 +66,12 @@
 }</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_count">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>590</y>
-      <width>401</width>
+      <x>220</x>
+      <y>690</y>
+      <width>201</width>
       <height>81</height>
      </rect>
     </property>
@@ -89,83 +89,7 @@ background-color:white;</string>
      <string>计算</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_M">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>500</y>
-      <width>191</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Microsoft YaHei UI</family>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:black;
-background-color:white;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox_kg_g">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>500</y>
-      <width>81</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Microsoft YaHei UI</family>
-      <pointsize>21</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:black;
-background-color:white;</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>  kg</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>  g</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>500</y>
-      <width>149</width>
-      <height>75</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>微软雅黑</family>
-      <pointsize>23</pointsize>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(0, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>燃料质量:</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="layoutWidget1">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -266,8 +190,8 @@ background-color:white;</string>
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>680</y>
-      <width>401</width>
+      <y>690</y>
+      <width>201</width>
       <height>81</height>
      </rect>
     </property>
@@ -285,12 +209,12 @@ background-color:white;</string>
      <string>导出</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="layoutWidget2">
     <property name="geometry">
      <rect>
       <x>180</x>
       <y>30</y>
-      <width>191</width>
+      <width>192</width>
       <height>441</height>
      </rect>
     </property>
@@ -307,7 +231,7 @@ background-color:white;</string>
         <string notr="true">color:rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>99999.9999</string>
+        <string>NULL</string>
        </property>
       </widget>
      </item>
@@ -323,7 +247,7 @@ background-color:white;</string>
         <string notr="true">color:rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>99999.9999</string>
+        <string>NULL</string>
        </property>
       </widget>
      </item>
@@ -339,7 +263,7 @@ background-color:white;</string>
         <string notr="true">color:rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>99999.9999</string>
+        <string>NULL</string>
        </property>
       </widget>
      </item>
@@ -355,7 +279,7 @@ background-color:white;</string>
         <string notr="true">color:rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>99999.9999</string>
+        <string>NULL</string>
        </property>
       </widget>
      </item>
@@ -371,13 +295,13 @@ background-color:white;</string>
         <string notr="true">color:rgb(0, 0, 0);</string>
        </property>
        <property name="text">
-        <string>99999.9999</string>
+        <string>NULL</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QWidget" name="verticalLayoutWidget3">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -387,7 +311,9 @@ background-color:white;</string>
      </rect>
     </property>
     <property name="font">
-     <font/>
+     <font>
+      <family>Microsoft YaHei UI</family>
+     </font>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
@@ -477,6 +403,291 @@ background-color:white;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="pushButton_count_mr">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>610</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>63</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>10000</width>
+      <height>1000</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:black;
+background-color:white;</string>
+    </property>
+    <property name="text">
+     <string>←点我
+   计算</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>141</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="label_m">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>23</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>燃料质量:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_sps">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>23</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>采集速率:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_mr">
+       <property name="font">
+        <font>
+         <family>微软雅黑</family>
+         <pointsize>23</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>质量流量:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>470</y>
+      <width>191</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_m">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;
+background-color:white;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_sps">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;
+background-color:white;</string>
+       </property>
+       <property name="text">
+        <string>0.002</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_mr">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>183</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>20</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;
+background-color:white;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>336</x>
+      <y>470</y>
+      <width>97</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_6">
+     <item>
+      <widget class="QComboBox" name="comboBox_kg_g">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>85</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;
+background-color:white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>kg</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>g</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_MHz_kHz_Hz">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>85</width>
+         <height>61</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei UI</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color:black;
+background-color:white;</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>MHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>kHz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hz</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
  </widget>
  <customwidgets>
@@ -491,6 +702,22 @@ background-color:white;</string>
   <include location="Welcom.qrc"/>
  </resources>
  <connections>
+  <connection>
+   <sender>pushButton_count</sender>
+   <signal>clicked()</signal>
+   <receiver>DataProcessing</receiver>
+   <slot>calculation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>1194</y>
+    </hint>
+   </hints>
+  </connection>
   <connection>
    <sender>pushButton_outFile</sender>
    <signal>clicked()</signal>
@@ -508,18 +735,18 @@ background-color:white;</string>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>pushButton_count_mr</sender>
    <signal>clicked()</signal>
    <receiver>DataProcessing</receiver>
-   <slot>calculation()</slot>
+   <slot>calculation_mr()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>271</x>
-     <y>621</y>
+     <x>378</x>
+     <y>642</y>
     </hint>
     <hint type="destinationlabel">
-     <x>335</x>
-     <y>1194</y>
+     <x>444</x>
+     <y>1143</y>
     </hint>
    </hints>
   </connection>
@@ -527,5 +754,6 @@ background-color:white;</string>
  <slots>
   <slot>outFile()</slot>
   <slot>calculation()</slot>
+  <slot>calculation_mr()</slot>
  </slots>
 </ui>
