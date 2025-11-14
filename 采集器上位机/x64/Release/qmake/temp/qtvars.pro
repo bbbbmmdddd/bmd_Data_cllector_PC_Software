@@ -1,2 +1,2 @@
 CONFIG += no_fixpath
-QT += core gui widgets charts webenginewidgets
+QT += core gui widgets serialport charts webenginewidgets

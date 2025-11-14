@@ -31,6 +31,10 @@ private slots:
     void outFile();
     void calculation();
     void calculation_mr();
+    void back();
+
+signals:
+	void back_choose();
 
 private:
     Ui::DataProcessing *ui;

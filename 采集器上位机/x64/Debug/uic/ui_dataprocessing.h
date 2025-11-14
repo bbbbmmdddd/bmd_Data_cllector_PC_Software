@@ -64,6 +64,7 @@ public:
     QVBoxLayout *verticalLayout_6;
     QComboBox *comboBox_kg_g;
     QComboBox *comboBox_MHz_kHz_Hz;
+    QPushButton *pushButton_back;
 
     void setupUi(QWidget *DataProcessing)
     {
@@ -101,6 +102,7 @@ public:
         pushButton_count->setFont(font2);
         pushButton_count->setStyleSheet(QString::fromUtf8("color:black;\n"
 "background-color:white;"));
+        pushButton_count->setFlat(false);
         layoutWidget1 = new QWidget(widget);
         layoutWidget1->setObjectName("layoutWidget1");
         layoutWidget1->setGeometry(QRect(10, 30, 164, 441));
@@ -364,11 +366,33 @@ public:
 
         verticalLayout_6->addWidget(comboBox_MHz_kHz_Hz);
 
+        pushButton_back = new QPushButton(widget);
+        pushButton_back->setObjectName("pushButton_back");
+        pushButton_back->setGeometry(QRect(1630, 920, 151, 151));
+        pushButton_back->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	border-image: url(:/Welcom/back.png);\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	image: url(:/Welcom/back_hover.png);\n"
+"}\n"
+""));
+        pushButton_back->setText(QString::fromUtf8(""));
+        pushButton_back->setIconSize(QSize(150, 150));
+        pushButton_back->setCheckable(false);
+        pushButton_back->setAutoRepeat(false);
+        pushButton_back->setAutoExclusive(false);
+        pushButton_back->setAutoDefault(false);
+        pushButton_back->setFlat(false);
 
         retranslateUi(DataProcessing);
         QObject::connect(pushButton_count, SIGNAL(clicked()), DataProcessing, SLOT(calculation()));
         QObject::connect(pushButton_outFile, SIGNAL(clicked()), DataProcessing, SLOT(outFile()));
         QObject::connect(pushButton_count_mr, SIGNAL(clicked()), DataProcessing, SLOT(calculation_mr()));
+        QObject::connect(pushButton_back, SIGNAL(clicked()), DataProcessing, SLOT(back()));
+
+        pushButton_back->setDefault(false);
+
 
         QMetaObject::connectSlotsByName(DataProcessing);
     } // setupUi

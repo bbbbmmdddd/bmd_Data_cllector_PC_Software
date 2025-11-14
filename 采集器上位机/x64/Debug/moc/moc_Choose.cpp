@@ -39,7 +39,15 @@ struct qt_meta_tag_ZN6ChooseE_t {};
 static constexpr auto qt_meta_stringdata_ZN6ChooseE = QtMocHelpers::stringData(
     "Choose",
     "pushButton_DataTest",
-    ""
+    "",
+    "Chart_init",
+    "serialSend",
+    "openSerial",
+    "closeSerial",
+    "clearSerialReceive",
+    "pushSetup",
+    "labelRest",
+    "serialRest"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -51,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN6ChooseE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,9 +67,25 @@ Q_CONSTINIT static const uint qt_meta_data_ZN6ChooseE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   68,    2, 0x08,    1 /* Private */,
+       3,    0,   69,    2, 0x08,    2 /* Private */,
+       4,    0,   70,    2, 0x08,    3 /* Private */,
+       5,    0,   71,    2, 0x08,    4 /* Private */,
+       6,    0,   72,    2, 0x08,    5 /* Private */,
+       7,    0,   73,    2, 0x08,    6 /* Private */,
+       8,    0,   74,    2, 0x08,    7 /* Private */,
+       9,    0,   75,    2, 0x08,    8 /* Private */,
+      10,    0,   76,    2, 0x08,    9 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -77,6 +101,22 @@ Q_CONSTINIT const QMetaObject Choose::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Choose, std::true_type>,
         // method 'pushButton_DataTest'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'Chart_init'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'serialSend'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'openSerial'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'closeSerial'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'clearSerialReceive'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'pushSetup'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'labelRest'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'serialRest'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -88,6 +128,14 @@ void Choose::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->pushButton_DataTest(); break;
+        case 1: _t->Chart_init(); break;
+        case 2: _t->serialSend(); break;
+        case 3: _t->openSerial(); break;
+        case 4: _t->closeSerial(); break;
+        case 5: _t->clearSerialReceive(); break;
+        case 6: _t->pushSetup(); break;
+        case 7: _t->labelRest(); break;
+        case 8: _t->serialRest(); break;
         default: ;
         }
     }
@@ -113,14 +161,14 @@ int Choose::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 9;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 9;
     }
     return _id;
 }

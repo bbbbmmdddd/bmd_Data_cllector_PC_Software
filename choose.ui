@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Choose</string>
+   <string>Receive</string>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
@@ -51,8 +51,7 @@
    <property name="styleSheet">
     <string notr="true">QWidget#widget
 {
-	
-	border-image: url(:/Welcom/153_Black_Sea.png);
+	border-image: url(:/Welcom/screen.png);
 }</string>
    </property>
    <widget class="QGroupBox" name="groupBox_serialsend">
@@ -87,7 +86,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:white;</string>
+      <string notr="true"/>
      </property>
     </widget>
    </widget>
@@ -123,8 +122,7 @@
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:white;
-</string>
+      <string notr="true"/>
      </property>
     </widget>
    </widget>
@@ -194,8 +192,7 @@
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>上传设置</string>
@@ -250,8 +247,7 @@ background-color:white;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color:black;
-background-color:white;</string>
+      <string notr="true"/>
      </property>
      <property name="text">
       <string>Thrust</string>
@@ -314,7 +310,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QComboBox" name="comboBox_serialport_2">
+       <widget class="QComboBox" name="comboBox_serialport">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -322,8 +318,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
        </widget>
       </item>
@@ -345,7 +340,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QComboBox" name="comboBox_baudrate_2">
+       <widget class="QComboBox" name="comboBox_baudrate">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -353,14 +348,8 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
-        <item>
-         <property name="text">
-          <string>1152000</string>
-         </property>
-        </item>
         <item>
          <property name="text">
           <string>115200</string>
@@ -411,7 +400,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QComboBox" name="comboBox_databits_2">
+       <widget class="QComboBox" name="comboBox_databits">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -419,8 +408,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <item>
          <property name="text">
@@ -462,7 +450,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QComboBox" name="comboBox_stopbits_2">
+       <widget class="QComboBox" name="comboBox_stopbits">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -470,8 +458,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <item>
          <property name="text">
@@ -508,7 +495,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QComboBox" name="comboBox_parity_2">
+       <widget class="QComboBox" name="comboBox_parity">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -516,8 +503,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <item>
          <property name="text">
@@ -547,7 +533,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="5" column="0">
-       <widget class="QPushButton" name="pushButton_serialRest_2">
+       <widget class="QPushButton" name="pushButton_serialRest">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -556,8 +542,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>刷新串口号</string>
@@ -565,7 +550,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QPushButton" name="pushButton_openport_2">
+       <widget class="QPushButton" name="pushButton_openport">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -574,8 +559,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>打开串口</string>
@@ -583,7 +567,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QPushButton" name="pushButton_closeport_2">
+       <widget class="QPushButton" name="pushButton_closeport">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -592,8 +576,7 @@ background-color:white;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color:black;
-background-color:white;</string>
+         <string notr="true"/>
         </property>
         <property name="text">
          <string>关闭串口</string>
@@ -601,7 +584,7 @@ background-color:white;</string>
        </widget>
       </item>
       <item row="6" column="0">
-       <widget class="QLabel" name="label_serialConnection_2">
+       <widget class="QLabel" name="label_serialConnection">
         <property name="font">
          <font>
           <family>Maple Mono NF CN</family>
@@ -641,7 +624,7 @@ background-color:white;</string>
     <property name="styleSheet">
      <string notr="true">QWidget#chartView
 {
-	background-color:white;
+	background-color:rgb(45,45,45);
 }</string>
     </property>
    </widget>
@@ -662,8 +645,7 @@ background-color:white;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:black;
-background-color:white;</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>数据处理测试</string>
@@ -689,8 +671,7 @@ background-color:white;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:black;
-background-color:white;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>←清空</string>
@@ -707,8 +688,7 @@ background-color:white;</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color:black;
-background-color:white;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>发送→</string>
@@ -747,8 +727,127 @@ background-color:white;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_serialsend</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>serialSend()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>1038</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>291</x>
+     <y>1214</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_serialRest</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>serialRest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-214</x>
+     <y>265</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_pushSetup</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>pushSetup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>183</x>
+     <y>586</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-190</x>
+     <y>597</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_openport</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>openSerial()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>201</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-30</x>
+     <y>292</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_closeport</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>closeSerial()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>318</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-42</x>
+     <y>338</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_clearserialreceive</sender>
+   <signal>clicked()</signal>
+   <receiver>Choose</receiver>
+   <slot>clearSerialReceive()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>336</x>
+     <y>977</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>1128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_m</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Choose</receiver>
+   <slot>labelRest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-194</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>pushButton_DataTest()</slot>
+  <slot>serialSend()</slot>
+  <slot>serialRest()</slot>
+  <slot>pushSetup()</slot>
+  <slot>openSerial()</slot>
+  <slot>closeSerial()</slot>
+  <slot>clearSerialReceive()</slot>
+  <slot>labelRest()</slot>
  </slots>
 </ui>

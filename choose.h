@@ -19,9 +19,24 @@ public:
 
 private slots:
     void pushButton_DataTest();
+    void Chart_init();
+
+    void serialSend();
+    void openSerial();
+    void closeSerial();
+    void clearSerialReceive();
+    void pushSetup();
+    void labelRest();
+    void serialRest();
 
 private:
     Ui::Choose *ui;
+
+    QChart* chart = NULL;
+    QValueAxis* axisX = NULL;
+    QValueAxis* axisY = NULL;
+
+    QLineSeries* series = NULL;
 };
 
 #endif // CHOOSE_H

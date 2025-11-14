@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="Welcom">
+    <file>back.png</file>
+    <file>back_hover.png</file>
     <file>background.jpg</file>
     <file>I.png</file>
     <file>Modularization_Data_Collector.png</file>

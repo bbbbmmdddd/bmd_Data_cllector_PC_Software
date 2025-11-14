@@ -88,6 +88,9 @@ background-color:white;</string>
     <property name="text">
      <string>计算</string>
     </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QWidget" name="layoutWidget1">
     <property name="geometry">
@@ -688,6 +691,53 @@ background-color:white;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="pushButton_back">
+    <property name="geometry">
+     <rect>
+      <x>1630</x>
+      <y>920</y>
+      <width>151</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	border-image: url(:/Welcom/back.png);
+}
+
+QPushButton:hover {
+	image: url(:/Welcom/back_hover.png);
+}
+</string>
+    </property>
+    <property name="text">
+     <string notr="true"/>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>150</width>
+      <height>150</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
   </widget>
  </widget>
  <customwidgets>
@@ -750,10 +800,27 @@ background-color:white;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_back</sender>
+   <signal>clicked()</signal>
+   <receiver>DataProcessing</receiver>
+   <slot>back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1708</x>
+     <y>954</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1698</x>
+     <y>1312</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>outFile()</slot>
   <slot>calculation()</slot>
   <slot>calculation_mr()</slot>
+  <slot>back()</slot>
  </slots>
 </ui>
