@@ -13,7 +13,7 @@
 
 double ADC_sps;
 
-double myArray[] = {1,2,3,4,5,6,7,9,8,7,6,5,4,3,2,1};
+double myArray[] = {0};
 
 DataProcessing::DataProcessing(QWidget *parent)
     : QWidget(parent)
@@ -23,8 +23,6 @@ DataProcessing::DataProcessing(QWidget *parent)
     Chart_init();
     for (int i = 0;i < sizeof(myArray) / sizeof(double);i++) {
 		my_series->append(i,myArray[i]);
-        //QThread::msleep(1);
-        //my_series->append(i，qrand() % 220);
     }
 }
 
@@ -44,7 +42,7 @@ void DataProcessing::Chart_init() {
     }
     if (my_axisX == NULL) {
         my_axisX = new QValueAxis();
-        my_axisX->setTitleText("Time");
+        //my_axisX->setTitleText("Time");
         my_axisX->setRange(0,sizeof(myArray) / sizeof(double));
         my_axisX->setGridLineVisible(true);
         my_axisX->setTickCount(6);

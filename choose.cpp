@@ -4,12 +4,12 @@
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QtWidgets/QMessageBox>
-
-double Array[] = { 1,2,3,4,5,6,7,9,8,7,6,5,4,3,2,1 };
+#include <QTimer>
+#include <QtGlobal>
+#include <QDateTime>
+#include <QRandomGenerator>
 
 QSerialPort* COM = new QSerialPort();
-
-bool opened = 0;
 
 Choose::Choose(QWidget *parent)
     : QWidget(parent)
@@ -23,15 +23,26 @@ Choose::Choose(QWidget *parent)
 	});
 
     Chart_init();
-    for (int i = 0;i < sizeof(Array) / sizeof(double);i++) {
-        series->append(i, Array[i]);
-    }
+    timerUpdate();
+    connect(COM,SIGNAL(readyRead()),this,SLOT(Serial_RX()));
+
+    restTimer = new QTimer(this);
+    restTimer->setInterval(10);
+    connect(restTimer, &QTimer::timeout, this, &Choose::rest_Y);
+    restTimer->start();
 }
 
 Choose::~Choose()
 {
     delete ui;
 	delete ppage3;
+}
+
+void Choose::timerUpdate()
+{
+    QDateTime time = QDateTime::currentDateTime();
+    QString str = time.toString("yyyy-MM-dd hh:mm:ss dddd");
+    ui->label_date->setText(str);
 }
 
 void Choose::Chart_init() {
@@ -45,19 +56,19 @@ void Choose::Chart_init() {
     }
     if (axisX == NULL) {
         axisX = new QValueAxis();
-        axisX->setTitleText("Time");
-        axisX->setRange(0, sizeof(Array) / sizeof(double));
+        //axisX->setTitleText("Time");
+        axisX->setRange(0, 500);
         axisX->setGridLineVisible(true);
-        axisX->setTickCount(6);
-        axisX->setMinorTickCount(5);
+		axisX->setTickCount(11);//设置刻度线数量
+        //axisX->setMinorTickCount(10);
     }
     if (axisY == NULL) {
         axisY = new QValueAxis();
         axisY->setTitleText("N");
-        axisY->setRange(0, 170);
+        axisY->setRange(0, 50);
         axisY->setGridLineVisible(true);
-        axisY->setTickCount(22);
-        axisY->setMinorTickCount(5);
+        axisY->setTickCount(11);
+        //axisY->setMinorTickCount(10);
     }
 
     chart->setTheme(QChart::ChartThemeDark);
@@ -68,14 +79,61 @@ void Choose::Chart_init() {
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisX);
     series->attachAxis(axisY);
+    //series->setUseOpenGL(true);
     chart->legend()->hide();
     ui->chartView->setChart(chart);
     ui->chartView->setRenderHint(QPainter::Antialiasing);
 
 }
 
-void Choose::pushButton_DataTest()
-{
+int cmpfunc(const void* a, const void* b) {
+    return (*(int*)a - *(int*)b);
+}
+
+void Choose::rest_Y() {
+    for (int i = 0; i < 499; i++) {
+        Data_Temp[i] = Data[i];
+    }
+    qsort(Data_Temp, 500, sizeof(int), cmpfunc);
+    timerUpdate();
+    axisY->setRange(Data_Temp[1]-5, Data_Temp[498]+5);
+}
+
+void Choose::doRepaint(double y) {
+    y_list.append(y);
+    if (y_list.length() > 500) y_list.removeFirst();
+    QList<QPointF> points;
+    points.clear();
+    for (int i = 0;i < y_list.length();i++){
+        points.append(QPointF(i, y_list.at(i)));
+    }
+    series->replace(points);
+}
+
+void Choose::Serial_RX() {
+    QByteArray buf = COM->readAll();
+    if (!buf.isEmpty()) {
+        QString str = tr(buf);
+        ui->textEdit_serialreceive->insertPlainText(str);
+        ui->textEdit_serialreceive->moveCursor(QTextCursor::End);
+    }
+
+    QByteArray lineBuf;
+    lineBuf += buf;
+    int idx;
+    while ((idx = lineBuf.indexOf('\n')) >= 0) {
+        QByteArray line = lineBuf.left(idx).trimmed();
+        lineBuf.remove(0, idx + 1);
+        Data_rx = line.split(' ').first().toDouble();
+        rx_number++;
+        ui->label_number->setText(QString::number(rx_number));
+    }
+    Data[Data_tail] = Data_rx;
+	Data_tail = (Data_tail + 1) % 500;
+    doRepaint(Data_rx);
+}
+
+void Choose::pushButton_DataTest() {
 	qDebug() << "\nDataTest(){";
     this->hide();
     this->ppage3->show();
@@ -83,14 +141,15 @@ void Choose::pushButton_DataTest()
 }
 
 void Choose::serialSend() {
-    qDebug() << "SerialSend()";
+    qDebug() << "\nSerialSend(){";
     QString sendData = ui->textEdit_serialsend->toPlainText();
     sendData += "\r\n";
     COM->write(sendData.toLatin1());
+    qDebug() << "}";
 }
 
 void Choose::openSerial() {
-    qDebug() << "OpenSerial()";
+    qDebug() << "\nOpenSerial(){";
     QString baudRate = ui->comboBox_baudrate->currentText();
     QString dataBits = ui->comboBox_databits->currentText();
     QString stopbits = ui->comboBox_stopbits->currentText();
@@ -104,7 +163,7 @@ void Choose::openSerial() {
     QSerialPort::StopBits stopBitsValue = QSerialPort::StopBits(stopbits.toInt());
     COM->setStopBits(stopBitsValue);
 
-    QSerialPort::Parity parityValue;
+    QSerialPort::Parity parityValue = QSerialPort::NoParity;
     if (checkBits == "None") {
         parityValue = QSerialPort::NoParity;
     }
@@ -140,10 +199,11 @@ void Choose::openSerial() {
     else {
         QMessageBox::information(this, "提示", "串口已打开", QMessageBox::Yes);
     }
+    qDebug() << "}";
 }
 
 void Choose::closeSerial() {
-    qDebug() << "CloseSerial()";
+    qDebug() << "\nCloseSerial(){";
     if (opened) {
         COM->close();
         QFont font2;
@@ -159,15 +219,32 @@ void Choose::closeSerial() {
     else {
         QMessageBox::information(this, "提示", "并未打开串口\n要先打开串口哦", QMessageBox::Yes);
     }
-
+    qDebug() << "}";
 }
 
 void Choose::clearSerialReceive() {
-    qDebug() << "ClearSerialReceive()";
+    qDebug() << "\nclearSerialReceive(){";
+	ui->textEdit_serialreceive->clear();
+    rx_number = 0;
+    ui->label_number->setText(QString::number(rx_number));
+    qDebug() << "}";
+}
+
+void Choose::dataOpen() {
+    qDebug() << "\ndataOpen(){";
+
+    qDebug() << "}";
+}
+
+void Choose::dataClose() {
+    qDebug() << "\ndataClose(){";
+
+    qDebug() << "}";
 }
 
 void Choose::serialRest() {
-    qDebug() << "SerialRest()";
+    qDebug() << "\nserialRest(){";
+
     if (opened) {
         COM->close();
         QFont font2;
@@ -195,6 +272,7 @@ void Choose::serialRest() {
         int index = ui->comboBox_serialport->count() - 1;
         ui->comboBox_serialport->setItemData(index, portInfo, Qt::ToolTipRole);
     }
+    qDebug() << "}";
 }
 
 void Choose::labelRest() {

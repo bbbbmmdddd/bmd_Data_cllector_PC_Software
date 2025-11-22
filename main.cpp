@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QPixmap pixmap("welcom.png");
+    QPixmap pixmap("welcom.jpg");
     QSplashScreen splash(pixmap);
     splash.show();
     QThread::msleep(1500);
