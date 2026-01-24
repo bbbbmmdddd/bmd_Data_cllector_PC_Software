@@ -1,5 +1,8 @@
 <RCC>
   <qresource prefix="Welcom">
+    <file>bqb.gif</file>
+    <file>hair.png</file>
+    <file>320hz_card.jpg</file>
     <file>back.png</file>
     <file>back_hover.png</file>
     <file>background.jpg</file>

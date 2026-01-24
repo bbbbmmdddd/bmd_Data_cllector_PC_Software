@@ -406,7 +406,7 @@ public:
         label_6->setText(QCoreApplication::translate("DataProcessing", "\346\234\200\345\244\247\346\257\224\345\206\262:", nullptr));
         label_3->setText(QCoreApplication::translate("DataProcessing", "\345\271\263\345\235\207\346\216\250\345\212\233:", nullptr));
         label_4->setText(QCoreApplication::translate("DataProcessing", "\346\234\200\345\244\247\346\216\250\345\212\233:", nullptr));
-        pushButton_outFile->setText(QCoreApplication::translate("DataProcessing", "\345\257\274\345\207\272", nullptr));
+        pushButton_outFile->setText(QCoreApplication::translate("DataProcessing", "\345\257\274\345\205\245", nullptr));
         label_TotalImpulse->setText(QCoreApplication::translate("DataProcessing", "NULL", nullptr));
         label_AverageSpecificImpulse->setText(QCoreApplication::translate("DataProcessing", "NULL", nullptr));
         label_MaxSpecificImpulse->setText(QCoreApplication::translate("DataProcessing", "NULL", nullptr));
@@ -423,7 +423,7 @@ public:
         label_sps->setText(QCoreApplication::translate("DataProcessing", "\351\207\207\351\233\206\351\200\237\347\216\207:", nullptr));
         label_mr->setText(QCoreApplication::translate("DataProcessing", "\350\264\250\351\207\217\346\265\201\351\207\217:", nullptr));
         lineEdit_m->setText(QString());
-        lineEdit_sps->setText(QCoreApplication::translate("DataProcessing", "0.002", nullptr));
+        lineEdit_sps->setText(QCoreApplication::translate("DataProcessing", "0.001", nullptr));
         lineEdit_mr->setText(QString());
         comboBox_kg_g->setItemText(0, QCoreApplication::translate("DataProcessing", "kg", nullptr));
         comboBox_kg_g->setItemText(1, QCoreApplication::translate("DataProcessing", "g", nullptr));

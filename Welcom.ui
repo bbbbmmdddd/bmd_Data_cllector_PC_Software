@@ -87,6 +87,11 @@
       </item>
       <item>
        <property name="text">
+        <string>320Hz_Card</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>Modularization_Data_Collector</string>
        </property>
       </item>

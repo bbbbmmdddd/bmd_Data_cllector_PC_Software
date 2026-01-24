@@ -46,6 +46,9 @@
     <ClCompile Include="dataprocessing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="choose_low.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="采集器上位机.pro">
@@ -60,12 +63,18 @@
     <QtUic Include="dataprocessing.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="choose_low.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="choose.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="dataprocessing.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="choose_low.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

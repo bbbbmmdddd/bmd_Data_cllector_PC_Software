@@ -34,6 +34,7 @@ private slots:
     void rest_Y();
     void dataOpen();
     void dataClose();
+    void area_on_off();
 
 private:
     Ui::Choose *ui;
@@ -43,11 +44,12 @@ private:
     QValueAxis* axisY = NULL;
 
     QLineSeries* series = NULL;
+	QAreaSeries* series_area = NULL;
 
     QTimer* restTimer = NULL;
 
-    int Data[500] = { 0 };
-    int Data_Temp[500] = { 0 };
+    int Data[250] = { 0 };
+    int Data_Temp[250] = { 0 };
 	int Data_head = 0;
 	int Data_tail = 0;
     int Data_rx = 0;

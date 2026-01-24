@@ -209,7 +209,7 @@ background-color:white;</string>
 background-color:white;</string>
     </property>
     <property name="text">
-     <string>导出</string>
+     <string>导入</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget2">
@@ -567,7 +567,7 @@ background-color:white;</string>
 background-color:white;</string>
        </property>
        <property name="text">
-        <string>0.002</string>
+        <string>0.001</string>
        </property>
       </widget>
      </item>

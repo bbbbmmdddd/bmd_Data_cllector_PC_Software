@@ -59,6 +59,7 @@ public:
         comboBox = new QComboBox(widget);
         comboBox->addItem(QString());
         comboBox->addItem(QString());
+        comboBox->addItem(QString());
         comboBox->setObjectName("comboBox");
         comboBox->setGeometry(QRect(200, 40, 451, 51));
         QFont font2;
@@ -92,7 +93,8 @@ public:
     {
         WelcomClass->setWindowTitle(QCoreApplication::translate("WelcomClass", "Welcom", nullptr));
         comboBox->setItemText(0, QCoreApplication::translate("WelcomClass", "Easy_Data_Collector", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("WelcomClass", "Modularization_Data_Collector", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("WelcomClass", "320Hz_Card", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("WelcomClass", "Modularization_Data_Collector", nullptr));
 
         label_pictures->setText(QString());
         pushButton_Enter->setText(QCoreApplication::translate("WelcomClass", "Enter", nullptr));

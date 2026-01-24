@@ -8,6 +8,7 @@
 #include <QtGlobal>
 #include <QDateTime>
 #include <QRandomGenerator>
+#include <QtCharts/QAreaSeries>
 
 QSerialPort* COM = new QSerialPort();
 
@@ -49,15 +50,19 @@ void Choose::Chart_init() {
     if (chart == NULL) {
         chart = new QChart();
     }
-    if (series == NULL) {
+	if (series == NULL) {//折线图
         series = new QLineSeries();
         series->setName("N");
         chart->addSeries(series);
     }
+	if (series_area == NULL) {//面积图
+        series_area = new QAreaSeries(series, 0);
+        chart->addSeries(series_area);
+    }
     if (axisX == NULL) {
         axisX = new QValueAxis();
         //axisX->setTitleText("Time");
-        axisX->setRange(0, 500);
+        axisX->setRange(0, 250);
         axisX->setGridLineVisible(true);
 		axisX->setTickCount(11);//设置刻度线数量
         //axisX->setMinorTickCount(10);
@@ -71,6 +76,7 @@ void Choose::Chart_init() {
         //axisY->setMinorTickCount(10);
     }
 
+    //chart->setAnimationOptions(QChart::AllAnimations);
     chart->setTheme(QChart::ChartThemeDark);
     chart->legend()->setLabelColor(Qt::black);
     chart->setTitleBrush(QColor(255, 255, 255));
@@ -79,11 +85,28 @@ void Choose::Chart_init() {
     chart->addAxis(axisY, Qt::AlignLeft);
     series->attachAxis(axisX);
     series->attachAxis(axisY);
-    //series->setUseOpenGL(true);
+	series_area->attachAxis(axisX);
+	series_area->attachAxis(axisY);
+    series->setUseOpenGL(true);
+    series_area->setUseOpenGL(true);
+    series_area->setVisible(false);
+
+    QPen pen(QColor("#d2e4eb"));
+    pen.setWidth(2);
+    series_area->setPen(pen);
+
+    QBrush brush(QColor(100,116,128,100));
+    series_area->setBrush(brush);
+
+
     chart->legend()->hide();
     ui->chartView->setChart(chart);
     ui->chartView->setRenderHint(QPainter::Antialiasing);
 
+}
+
+void Choose::area_on_off() {
+    series_area->setVisible(ui->checkBox->isChecked());
 }
 
 int cmpfunc(const void* a, const void* b) {
@@ -91,23 +114,25 @@ int cmpfunc(const void* a, const void* b) {
 }
 
 void Choose::rest_Y() {
-    for (int i = 0; i < 499; i++) {
+    for (int i = 0; i < 249; i++) {
         Data_Temp[i] = Data[i];
     }
-    qsort(Data_Temp, 500, sizeof(int), cmpfunc);
+    qsort(Data_Temp, 250, sizeof(int), cmpfunc);
     timerUpdate();
-    axisY->setRange(Data_Temp[1]-5, Data_Temp[498]+5);
+    axisY->setRange(Data_Temp[1]-5, Data_Temp[248]+50);
 }
 
 void Choose::doRepaint(double y) {
     y_list.append(y);
-    if (y_list.length() > 500) y_list.removeFirst();
+    if (y_list.length() > 250) y_list.removeFirst();
     QList<QPointF> points;
     points.clear();
     for (int i = 0;i < y_list.length();i++){
         points.append(QPointF(i, y_list.at(i)));
     }
     series->replace(points);
+	series_area->setUpperSeries(series);
+	//series_area->setLowerSeries(0);
 }
 
 void Choose::Serial_RX() {
@@ -129,7 +154,7 @@ void Choose::Serial_RX() {
         ui->label_number->setText(QString::number(rx_number));
     }
     Data[Data_tail] = Data_rx;
-	Data_tail = (Data_tail + 1) % 500;
+	Data_tail = (Data_tail + 1) % 250;
     doRepaint(Data_rx);
 }
 
@@ -248,7 +273,7 @@ void Choose::serialRest() {
     if (opened) {
         COM->close();
         QFont font2;
-        font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+        font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
         font2.setPointSize(16);
         font2.setBold(false);
         font2.setKerning(true);
@@ -258,7 +283,7 @@ void Choose::serialRest() {
         opened = 0;
     }
     QFont font2;
-    font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+    font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
     font2.setPointSize(16);
     font2.setBold(false);
     font2.setKerning(true);
@@ -277,8 +302,8 @@ void Choose::serialRest() {
 
 void Choose::labelRest() {
     QFont font2;
-    font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
-    font2.setPointSize(16);
+    font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
+    font2.setPointSize(18);
     font2.setBold(false);
     font2.setKerning(true);
     ui->label_remember->setFont(font2);
@@ -291,8 +316,8 @@ void Choose::pushSetup() {
     QString nameFile = ui->lineEdit_m->text();
 	num += "推力文件名称:" + nameFile + "\n";
     QFont font2;
-    font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
-    font2.setPointSize(16);
+    font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
+    font2.setPointSize(18);
     font2.setBold(false);
     font2.setKerning(true);
     ui->label_remember->setFont(font2);

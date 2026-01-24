@@ -1,8 +1,9 @@
-﻿生成启动时间为 2025/11/22 21:58:07。
+﻿生成启动时间为 2026-01-24 17:24:31。
 日志记录详细程度设置为: Normal。     1>项目“D:\采集器上位机\采集器上位机\采集器上位机.vcxproj”在节点 2 上(Build 个目标)。
      1>PrepareForBuild:
          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
        InitializeBuildStatus:
+         正在创建“采集器上位机\x64\Debug\采集器上位机.tlog\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
          正在对“采集器上位机\x64\Debug\采集器上位机.tlog\unsuccessfulbuild”执行 Touch 任务。
        QtUicSetModified:
        正在跳过目标“QtUicSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
@@ -10,6 +11,10 @@
        正在跳过目标“QtUicSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
        QtUicSetModified:
        正在跳过目标“QtUicSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
+       QtUicSetModified:
+       正在跳过目标“QtUicSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
+       QtUic:
+       正在跳过目标“QtUic”，因为所有输出文件相对于输入文件而言都是最新的。
        QtUic:
        正在跳过目标“QtUic”，因为所有输出文件相对于输入文件而言都是最新的。
        QtRccSetModified:
@@ -30,6 +35,12 @@
        正在跳过目标“QtMocSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
        QtMocSetModified:
        正在跳过目标“QtMocSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
+       QtMocSetModified:
+       正在跳过目标“QtMocSetModified”，因为所有输出文件相对于输入文件而言都是最新的。
+       QtMoc:
+       正在跳过目标“QtMoc”，因为所有输出文件相对于输入文件而言都是最新的。
+       QtMoc:
+       正在跳过目标“QtMoc”，因为所有输出文件相对于输入文件而言都是最新的。
        QtMoc:
        正在跳过目标“QtMoc”，因为所有输出文件相对于输入文件而言都是最新的。
        ClCompile:
@@ -40,6 +51,7 @@
        正在跳过目标“QtNatvis”，因为所有输出文件相对于输入文件而言都是最新的。
        Link:
          D:\Microsoft Visual Studio\VC\Tools\MSVC\14.43.34808\bin\HostX64\x64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.exe" /NOLOGO /LIBPATH:"D:\采集器上位机\采集器上位机\packages\SARibbonBar.1.0.1\build\native\lib\win64\debug" /LIBPATH:"D:\采集器上位机\采集器上位机\QXlsx\build\Desktop_Qt_6_8_3_MSVC2022_64bit-Debug\debug" SARibbonBar.lib QXlsx.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Chartsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLWidgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineWidgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6PrintSupportd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Widgetsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebEngineCored.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Quickd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6OpenGLd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Guid.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6SerialPortd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlMetad.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlModelsd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6QmlWorkerScriptd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6WebChanneld.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Qmld.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Networkd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Positioningd.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6Cored.lib D:\QT\6.8.3\msvc2022_64\lib\Qt6EntryPointd.lib shell32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.lib" /MACHINE:X64 /NATVIS:"采集器上位机\x64\Debug\\qt.natvis" "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" "采集器上位机\x64\Debug\choose.obj"
+         "采集器上位机\x64\Debug\choose_low.obj"
          "采集器上位机\x64\Debug\dataprocessing.obj"
          "采集器上位机\x64\Debug\Welcom.obj"
          "采集器上位机\x64\Debug\main.obj"
@@ -47,6 +59,7 @@
          "采集器上位机\x64\Debug\moc_Welcom.obj"
          "采集器上位机\x64\Debug\moc_choose.obj"
          "采集器上位机\x64\Debug\moc_dataprocessing.obj"
+         "采集器上位机\x64\Debug\moc_choose_low.obj"
          采集器上位机.vcxproj -> D:\采集器上位机\采集器上位机\x64\Debug\采集器上位机.exe
        FinalizeBuildStatus:
          正在删除文件“采集器上位机\x64\Debug\采集器上位机.tlog\unsuccessfulbuild”。
@@ -59,4 +72,4 @@
     0 个警告
     0 个错误
 
-已用时间 00:00:01.89
+已用时间 00:00:03.67

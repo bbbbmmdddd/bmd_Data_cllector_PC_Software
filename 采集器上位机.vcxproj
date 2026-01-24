@@ -111,10 +111,12 @@
   <ItemGroup>
     <QtRcc Include="Welcom.qrc" />
     <QtUic Include="choose.ui" />
+    <QtUic Include="choose_low.ui" />
     <QtUic Include="dataprocessing.ui" />
     <QtUic Include="Welcom.ui" />
     <QtMoc Include="Welcom.h" />
     <ClCompile Include="choose.cpp" />
+    <ClCompile Include="choose_low.cpp" />
     <ClCompile Include="dataprocessing.cpp" />
     <ClCompile Include="Welcom.cpp" />
     <ClCompile Include="main.cpp" />
@@ -128,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="dataprocessing.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="choose_low.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

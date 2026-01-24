@@ -23,15 +23,18 @@ RESOURCES += \
 FORMS += \
     Welcom.ui \
     choose.ui \
+    choose_low.ui \
     dataprocessing.ui
 
 HEADERS += \
     Welcom.h \
     choose.h \
+    choose_low.h \
     dataprocessing.h
 
 SOURCES += \
     Welcom.cpp \
     choose.cpp \
+    choose_low.cpp \
     dataprocessing.cpp \
     main.cpp

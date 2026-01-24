@@ -12,7 +12,9 @@
 #include <QtCharts/QChartView>
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
@@ -62,16 +64,19 @@ public:
     QPushButton *pushButton_closeport;
     QLabel *label_serialConnection;
     QChartView *chartView;
+    QCheckBox *checkBox;
+    QGraphicsView *graphicsView;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *pushButton_clearserialreceive;
     QPushButton *pushButton_serialsend;
     QLabel *label_date;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton_DataOpen;
     QPushButton *pushButton_DataClose;
     QPushButton *pushButton_DataTest;
+    QLabel *label_date_3;
 
     void setupUi(QWidget *Choose)
     {
@@ -111,16 +116,16 @@ public:
         textEdit_serialsend->setStyleSheet(QString::fromUtf8(""));
         groupBox_serialreceive = new QGroupBox(widget);
         groupBox_serialreceive->setObjectName("groupBox_serialreceive");
-        groupBox_serialreceive->setGeometry(QRect(20, 620, 251, 441));
+        groupBox_serialreceive->setGeometry(QRect(20, 620, 251, 421));
         groupBox_serialreceive->setFont(font1);
         groupBox_serialreceive->setStyleSheet(QString::fromUtf8(""));
         textEdit_serialreceive = new QTextEdit(groupBox_serialreceive);
         textEdit_serialreceive->setObjectName("textEdit_serialreceive");
-        textEdit_serialreceive->setGeometry(QRect(10, 30, 231, 381));
+        textEdit_serialreceive->setGeometry(QRect(10, 30, 231, 361));
         textEdit_serialreceive->setFont(font2);
         layoutWidget = new QWidget(groupBox_serialreceive);
         layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(10, 410, 231, 31));
+        layoutWidget->setGeometry(QRect(10, 390, 231, 31));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -327,11 +332,7 @@ public:
 
         label_serialConnection = new QLabel(formLayoutWidget_2);
         label_serialConnection->setObjectName("label_serialConnection");
-        QFont font9;
-        font9.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
-        font9.setPointSize(16);
-        font9.setBold(true);
-        label_serialConnection->setFont(font9);
+        label_serialConnection->setFont(font1);
         label_serialConnection->setStyleSheet(QString::fromUtf8("color:red;"));
         label_serialConnection->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -345,6 +346,19 @@ public:
 "{\n"
 "	background-color:rgb(45,45,45);\n"
 "}"));
+        checkBox = new QCheckBox(chartView);
+        checkBox->setObjectName("checkBox");
+        checkBox->setGeometry(QRect(10, 910, 83, 19));
+        checkBox->setChecked(false);
+        checkBox->setAutoRepeat(false);
+        checkBox->setAutoExclusive(false);
+        checkBox->setTristate(false);
+        graphicsView = new QGraphicsView(chartView);
+        graphicsView->setObjectName("graphicsView");
+        graphicsView->setGeometry(QRect(1370, 0, 171, 161));
+        graphicsView->setStyleSheet(QString::fromUtf8("border-image: url(:/Welcom/hair.png);"));
+        graphicsView->raise();
+        checkBox->raise();
         verticalLayoutWidget = new QWidget(widget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
         verticalLayoutWidget->setGeometry(QRect(280, 960, 85, 100));
@@ -370,46 +384,55 @@ public:
         label_date->setGeometry(QRect(10, 10, 271, 31));
         label_date->setFont(font3);
         label_date->setAlignment(Qt::AlignmentFlag::AlignCenter);
-        widget1 = new QWidget(widget);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(1260, 960, 561, 111));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(widget);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(1260, 960, 561, 111));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_DataOpen = new QPushButton(widget1);
+        pushButton_DataOpen = new QPushButton(layoutWidget1);
         pushButton_DataOpen->setObjectName("pushButton_DataOpen");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton_DataOpen->sizePolicy().hasHeightForWidth());
         pushButton_DataOpen->setSizePolicy(sizePolicy);
-        QFont font10;
-        font10.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
-        font10.setPointSize(14);
-        font10.setBold(false);
-        pushButton_DataOpen->setFont(font10);
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
+        font9.setPointSize(14);
+        font9.setBold(false);
+        pushButton_DataOpen->setFont(font9);
         pushButton_DataOpen->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataOpen);
 
-        pushButton_DataClose = new QPushButton(widget1);
+        pushButton_DataClose = new QPushButton(layoutWidget1);
         pushButton_DataClose->setObjectName("pushButton_DataClose");
         sizePolicy.setHeightForWidth(pushButton_DataClose->sizePolicy().hasHeightForWidth());
         pushButton_DataClose->setSizePolicy(sizePolicy);
-        pushButton_DataClose->setFont(font10);
+        pushButton_DataClose->setFont(font9);
         pushButton_DataClose->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataClose);
 
-        pushButton_DataTest = new QPushButton(widget1);
+        pushButton_DataTest = new QPushButton(layoutWidget1);
         pushButton_DataTest->setObjectName("pushButton_DataTest");
         sizePolicy.setHeightForWidth(pushButton_DataTest->sizePolicy().hasHeightForWidth());
         pushButton_DataTest->setSizePolicy(sizePolicy);
-        pushButton_DataTest->setFont(font10);
+        pushButton_DataTest->setFont(font9);
         pushButton_DataTest->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataTest);
 
+        label_date_3 = new QLabel(widget);
+        label_date_3->setObjectName("label_date_3");
+        label_date_3->setGeometry(QRect(0, 1040, 281, 41));
+        QFont font10;
+        font10.setFamilies({QString::fromUtf8("Share-TechMono")});
+        font10.setPointSize(15);
+        font10.setBold(false);
+        label_date_3->setFont(font10);
+        label_date_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         retranslateUi(Choose);
         QObject::connect(pushButton_DataTest, SIGNAL(clicked()), Choose, SLOT(pushButton_DataTest()));
@@ -422,6 +445,7 @@ public:
         QObject::connect(lineEdit_m, SIGNAL(textChanged(QString)), Choose, SLOT(labelRest()));
         QObject::connect(pushButton_DataOpen, SIGNAL(clicked()), Choose, SLOT(dataOpen()));
         QObject::connect(pushButton_DataClose, SIGNAL(clicked()), Choose, SLOT(dataClose()));
+        QObject::connect(checkBox, SIGNAL(clicked()), Choose, SLOT(area_on_off()));
 
         QMetaObject::connectSlotsByName(Choose);
     } // setupUi
@@ -486,12 +510,14 @@ public:
         pushButton_openport->setText(QCoreApplication::translate("Choose", "\346\211\223\345\274\200\344\270\262\345\217\243", nullptr));
         pushButton_closeport->setText(QCoreApplication::translate("Choose", "\345\205\263\351\227\255\344\270\262\345\217\243", nullptr));
         label_serialConnection->setText(QCoreApplication::translate("Choose", "\346\234\252\350\277\236\346\216\245", nullptr));
+        checkBox->setText(QCoreApplication::translate("Choose", "\351\235\242\347\247\257\345\233\276", nullptr));
         pushButton_clearserialreceive->setText(QCoreApplication::translate("Choose", "\342\206\220\346\270\205\347\251\272", nullptr));
         pushButton_serialsend->setText(QCoreApplication::translate("Choose", "\345\217\221\351\200\201\342\206\222", nullptr));
         label_date->setText(QCoreApplication::translate("Choose", "2025-11-2213:45:50 Saturday", nullptr));
         pushButton_DataOpen->setText(QCoreApplication::translate("Choose", "\345\274\200\345\247\213\351\207\207\351\233\206", nullptr));
         pushButton_DataClose->setText(QCoreApplication::translate("Choose", "\345\201\234\346\255\242\351\207\207\351\233\206", nullptr));
         pushButton_DataTest->setText(QCoreApplication::translate("Choose", "\346\225\260\346\215\256\345\244\204\347\220\206", nullptr));
+        label_date_3->setText(QCoreApplication::translate("Choose", "2025/01/24 bbbbmmdddd", nullptr));
     } // retranslateUi
 
 };

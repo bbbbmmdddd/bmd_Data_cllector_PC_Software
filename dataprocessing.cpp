@@ -147,21 +147,22 @@ void DataProcessing::calculation_mr() {
 
 void DataProcessing::outFile() {
     qDebug() << "\noutFile(){";
-    QXlsx::Document xlsx("Template.xlsx");
-    xlsx.selectSheet("Data");
-    xlsx.write(1, 1,50);
-    xlsx.write(1, 2,50);
-    //xlsx.write(2, 2, QString::fromLocal8Bit("114514"));
-    //xlsx.saveAs("Template.xlsx");
 
-    if (!xlsx.selectSheet("Chart")) {
-        xlsx.addSheet("Chart");
-    }
+    //QXlsx::Document xlsx("Template.xlsx");
+    //xlsx.selectSheet("Data");
+    //xlsx.write(1, 1,50);
+    //xlsx.write(1, 2,50);
+    ////xlsx.write(2, 2, QString::fromLocal8Bit("114514"));
+    ////xlsx.saveAs("Template.xlsx");
 
-    QXlsx::Chart * pieChart = xlsx.insertChart(0, 0, QSize(2450, 1134));
-    pieChart->setChartType(QXlsx::Chart::CT_LineChart);
-    pieChart->addSeries(QXlsx::CellRange("B1:B1000"));
+    //if (!xlsx.selectSheet("Chart")) {
+    //    xlsx.addSheet("Chart");
+    //}
 
-    xlsx.saveAs("book1.xlsx");
+    //QXlsx::Chart * pieChart = xlsx.insertChart(0, 0, QSize(2450, 1134));
+    //pieChart->setChartType(QXlsx::Chart::CT_LineChart);
+    //pieChart->addSeries(QXlsx::CellRange("B1:B1000"));
+
+    //xlsx.saveAs("book1.xlsx");
     qDebug() << "}";
 }
