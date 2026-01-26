@@ -1,6 +1,7 @@
 ﻿#include "choose_low.h"
 #include "dataprocessing.h"
 #include "ui_choose_low.h"
+#include "Welcom.h"
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QtWidgets/QMessageBox>
@@ -169,6 +170,7 @@ void Choose_Low::pushButton_DataTest() {
     qDebug() << "\nDataTest(){";
     this->hide();
     this->ppage3->show();
+    ppage3->set_Sps_Line_Edit_Enabled(Welcom::fast);
     qDebug() << "}";
 }
 
@@ -207,9 +209,9 @@ void Choose_Low::openSerial() {
     if (!opened) {
         if (COM2->open(QIODevice::ReadWrite)) {
             QFont font2;
-            font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+            font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
             font2.setPointSize(16);
-            font2.setBold(false);
+            font2.setBold(true);
             font2.setKerning(true);
             ui->label_serialConnection_2->setFont(font2);
             ui->label_serialConnection_2->setStyleSheet("color:green;");
@@ -231,9 +233,9 @@ void Choose_Low::closeSerial() {
     if (opened) {
         COM2->close();
         QFont font2;
-        font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+        font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
         font2.setPointSize(16);
-        font2.setBold(false);
+        font2.setBold(true);
         font2.setKerning(true);
         ui->label_serialConnection_2->setFont(font2);
         ui->label_serialConnection_2->setStyleSheet("color:red;");
@@ -262,7 +264,7 @@ void Choose_Low::serialRest() {
         QFont font2;
         font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
         font2.setPointSize(16);
-        font2.setBold(false);
+        font2.setBold(true);
         font2.setKerning(true);
         ui->label_serialConnection_2->setFont(font2);
         ui->label_serialConnection_2->setStyleSheet("color:red;");
@@ -272,7 +274,7 @@ void Choose_Low::serialRest() {
     QFont font2;
     font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
     font2.setPointSize(16);
-    font2.setBold(false);
+    font2.setBold(true);
     font2.setKerning(true);
     ui->label_serialConnection_2->setFont(font2);
     ui->label_serialConnection_2->setStyleSheet("color:red;");

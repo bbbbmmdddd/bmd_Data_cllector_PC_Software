@@ -70,6 +70,7 @@
     <Link>
       <AdditionalDependencies>QXlsx.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\采集器上位机\采集器上位机\QXlsx\build\Desktop_Qt_6_8_3_MSVC2022_64bit-Debug\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>D:\采集器上位机\采集器上位机\QXlsx\source;D:\采集器上位机\采集器上位机\QXlsx\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -79,6 +80,7 @@
     <Link>
       <AdditionalLibraryDirectories>D:\采集器上位机\采集器上位机\QXlsx\build\Desktop_Qt_6_8_3_MSVC2022_64bit-Release\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>QXlsx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <ClCompile>
       <AdditionalIncludeDirectories>D:\采集器上位机\采集器上位机\QXlsx\source;D:\采集器上位机\采集器上位机\QXlsx\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

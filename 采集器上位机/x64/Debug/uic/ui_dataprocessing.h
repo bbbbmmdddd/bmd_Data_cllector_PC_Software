@@ -319,6 +319,9 @@ public:
         lineEdit_sps->setFont(font9);
         lineEdit_sps->setStyleSheet(QString::fromUtf8("color:black;\n"
 "background-color:white;"));
+        lineEdit_sps->setDragEnabled(false);
+        lineEdit_sps->setReadOnly(false);
+        lineEdit_sps->setClearButtonEnabled(false);
 
         verticalLayout_5->addWidget(lineEdit_sps);
 
@@ -363,6 +366,7 @@ public:
         comboBox_MHz_kHz_Hz->setFont(font10);
         comboBox_MHz_kHz_Hz->setStyleSheet(QString::fromUtf8("color:black;\n"
 "background-color:white;"));
+        comboBox_MHz_kHz_Hz->setEditable(false);
 
         verticalLayout_6->addWidget(comboBox_MHz_kHz_Hz);
 

@@ -4,16 +4,24 @@
 #include "xlsxchart.h"
 #include "xlsxrichstring.h"
 #include "xlsxworkbook.h"
-
+#include<QFileDialog>
+#include <QtWidgets/QMessageBox>
+#include<QVector>
 #include "dataprocessing.h"
 #include "ui_dataprocessing.h"
+#include "Welcom.h"
 
 #include <QUrl>
 #include <QDesktopServices>
 
 double ADC_sps;
+QVector<double> myArray;
+QVector<double> myArray_Time;
+//double *myArray = new double;
+long long math_Data_Long = 0;
+long long math_Data_Last = 0;
 
-double myArray[] = {0};
+QStringList csvList;
 
 DataProcessing::DataProcessing(QWidget *parent)
     : QWidget(parent)
@@ -21,8 +29,8 @@ DataProcessing::DataProcessing(QWidget *parent)
 {
     ui->setupUi(this);
     Chart_init();
-    for (int i = 0;i < sizeof(myArray) / sizeof(double);i++) {
-		my_series->append(i,myArray[i]);
+    if (!Welcom::fast) {
+        ui->lineEdit_sps->setEnabled(false);
     }
 }
 
@@ -43,7 +51,7 @@ void DataProcessing::Chart_init() {
     if (my_axisX == NULL) {
         my_axisX = new QValueAxis();
         //my_axisX->setTitleText("Time");
-        my_axisX->setRange(0,sizeof(myArray) / sizeof(double));
+        my_axisX->setRange(0,10);
         my_axisX->setGridLineVisible(true);
         my_axisX->setTickCount(6);
         my_axisX->setMinorTickCount(5);
@@ -80,25 +88,36 @@ void DataProcessing::calculation() {
 
     QString ADC_MHz_kHz_Hz = ui->comboBox_MHz_kHz_Hz->currentText();
 	QString m_Kg_g = ui->comboBox_kg_g->currentText();
-	ADC_sps = ui->lineEdit_sps->text().toDouble();
+	if(Welcom::fast) ADC_sps = ui->lineEdit_sps->text().toDouble();
 	double m = ui->lineEdit_m->text().toDouble();
-
-    if (ADC_MHz_kHz_Hz == "MHz") ADC_sps = ADC_sps * 1000000;
-    else if (ADC_MHz_kHz_Hz == "kHz") ADC_sps = ADC_sps * 1000;
-    else ADC_sps = ADC_sps;
+    if (Welcom::fast) {
+        if (ADC_MHz_kHz_Hz == "MHz") ADC_sps = ADC_sps * 1000000;
+        else if (ADC_MHz_kHz_Hz == "kHz") ADC_sps = ADC_sps * 1000;
+        else ADC_sps = ADC_sps;
+    }
     if (m_Kg_g == "kg") m = m;
     else m = m / 1000;
 
-    qDebug() << "   ADC_sps:" << ADC_sps << "Hz;";
+    if (Welcom::fast) qDebug() << "   ADC_sps:" << ADC_sps << "Hz;";
 	qDebug() << "   m:" << m << "kg;";
 
 	//总冲量
-    const double dt = 1.0 / ADC_sps;
     double totalImpulse = 0.0;
-    for (int i = 1; i < sizeof(myArray) / sizeof(double); i++) {
-        double avgThrust = (myArray[i] + myArray[i - 1]) * 0.5;
-        totalImpulse += avgThrust * dt;
+    if (Welcom::fast) {
+        const double dt = 1.0 / ADC_sps;
+        for (int i = 1; i < math_Data_Long; i++) {
+            double avgThrust = (myArray[i] + myArray[i - 1]) * 0.5;
+            totalImpulse += avgThrust * dt;
+        }
     }
+    else {
+        for (int i = 1; i < math_Data_Long; i++) {
+            double avgThrust = (myArray[i] + myArray[i - 1]) * 0.5;
+            double dt = myArray_Time[i] - myArray_Time[i - 1];
+            totalImpulse += avgThrust * dt;
+        }
+    }
+    
     ui->label_TotalImpulse->setText(QString::number(totalImpulse, 'f', 4));
 
 	//平均比冲
@@ -109,15 +128,15 @@ void DataProcessing::calculation() {
 
     //平均推力
     double AverageN = 0;
-    for (int i = 0; i < sizeof(myArray) / sizeof(double); i++) {
+    for (int i = 0; i < math_Data_Long; i++) {
 		AverageN += myArray[i];
     }
-	AverageN = AverageN / (sizeof(myArray) / sizeof(double));
+	AverageN = AverageN / math_Data_Long;
     ui->label_AverageN->setText(QString::number(AverageN, 'f', 4));
 
     //最大推力
     double MaxN = 0;
-	for (int i = 0; i < sizeof(myArray) / sizeof(double); i++) {
+	for (int i = 0; i < math_Data_Long; i++) {
 		if (myArray[i] > MaxN) {
 			MaxN = myArray[i];
 		}
@@ -145,10 +164,7 @@ void DataProcessing::calculation_mr() {
 	qDebug() << "}";
 }
 
-void DataProcessing::outFile() {
-    qDebug() << "\noutFile(){";
-
-    //QXlsx::Document xlsx("Template.xlsx");
+//QXlsx::Document xlsx("Template.xlsx");
     //xlsx.selectSheet("Data");
     //xlsx.write(1, 1,50);
     //xlsx.write(1, 2,50);
@@ -164,5 +180,74 @@ void DataProcessing::outFile() {
     //pieChart->addSeries(QXlsx::CellRange("B1:B1000"));
 
     //xlsx.saveAs("book1.xlsx");
+
+void DataProcessing::outFile() {
+    qDebug() << "\noutFile(){";
+
+    QFile csvFile(QFileDialog::getOpenFileName(this));
+    csvList.clear();
+    myArray.clear();
+	myArray_Time.clear();
+
+    if (csvFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream stream(&csvFile);
+        while (!stream.atEnd()) {
+            csvList.push_back(stream.readLine());
+        }
+        csvFile.close();
+    }
+    else {
+        QMessageBox::about(NULL, "csv文件", "未打开该文件！");
+        return ;
+    }
+
+    int math_Data_Max = 0;
+    math_Data_Long = 0;
+    for (QString& str : csvList) {
+        QStringList math_Data = str.split(",");
+        if (str.isEmpty()) continue;
+        QString math_N,math_Time;
+        if (Welcom::fast) {
+            math_N = math_Data[0];
+        }
+        else {
+            math_Time = math_Data[0];
+			math_N = math_Data[1];
+        }
+            
+        double math_N_D = math_N.toDouble();
+        double math_Time_D = 0;
+		if (!Welcom::fast) math_Time_D = math_Time.toDouble();
+        if (!Welcom::fast) qDebug() << math_Time_D << math_N_D;
+        if (Welcom::fast)qDebug() << math_N_D;
+        if (math_Data_Max < math_N_D) {
+            math_Data_Max = math_N_D;
+        }
+        ////my_series->append(math_Data_Long, math_N_D);
+        //myArray[math_Data_Long] = math_N_D;
+        myArray.append(math_N_D);
+		myArray_Time.append(math_Time_D);
+        math_Data_Long++;
+
+    }
+
+    QMessageBox::information(this, "提示", "正在绘图 请耐心等待", "已知晓");
+
+    my_series->clear();
+    for (int i = 0; i < math_Data_Long; i++) {
+        my_series->append(i, myArray[i]);
+    }
+
+    my_axisX->setRange(0, math_Data_Long);
+    my_axisY->setRange(0, math_Data_Max + 10);
+    QMessageBox::information(this, "提示", "绘图完成 ", "OK");
     qDebug() << "}";
+
+}
+
+void DataProcessing::set_Sps_Line_Edit_Enabled(bool enabled) {
+    ui->lineEdit_sps->setEnabled(enabled);
+    if(!enabled) ui->lineEdit_sps->setStyleSheet("background-color: rgb(200, 200, 200);");
+	ui->comboBox_MHz_kHz_Hz->setEnabled(enabled);
+    if (!enabled) ui->comboBox_MHz_kHz_Hz->setStyleSheet("background-color: rgb(200, 200, 200);");
 }

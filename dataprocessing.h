@@ -26,6 +26,8 @@ public:
     explicit DataProcessing(QWidget *parent = nullptr);
     ~DataProcessing();
 
+    void set_Sps_Line_Edit_Enabled(bool enabled);
+
 private slots:
     void Chart_init();
     void outFile();

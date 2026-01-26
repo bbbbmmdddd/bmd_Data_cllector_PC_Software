@@ -1,7 +1,9 @@
-#include "Welcom.h"
+﻿#include "Welcom.h"
 #include <QDebug>
 #include "choose.h"
 #include "choose_low.h"
+
+bool Welcom::fast = true;
 
 Welcom::Welcom(QWidget *parent)
     : QWidget(parent)
@@ -40,11 +42,12 @@ void Welcom::pushButton_Enter() {
     if (Change_text == "320Hz_Card") {
         this->hide();
         this->ppage_low->show();
+        fast = false;
     }
     else {
 		this->hide();
 		this->ppage2->show();
+        fast = true;
     }
-
     qDebug() << "}";
 }

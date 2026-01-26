@@ -1,6 +1,7 @@
 ﻿#include "choose.h"
 #include "dataprocessing.h"
 #include "ui_choose.h"
+#include "Welcom.h"
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
 #include <QtWidgets/QMessageBox>
@@ -162,6 +163,7 @@ void Choose::pushButton_DataTest() {
 	qDebug() << "\nDataTest(){";
     this->hide();
     this->ppage3->show();
+    ppage3->set_Sps_Line_Edit_Enabled(Welcom::fast);
     qDebug() << "}";
 }
 
@@ -208,9 +210,9 @@ void Choose::openSerial() {
     if (!opened) {
         if (COM->open(QIODevice::ReadWrite)) {
             QFont font2;
-            font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+            font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
             font2.setPointSize(16);
-            font2.setBold(false);
+            font2.setBold(true);
             font2.setKerning(true);
             ui->label_serialConnection->setFont(font2);
             ui->label_serialConnection->setStyleSheet("color:green;");
@@ -232,9 +234,9 @@ void Choose::closeSerial() {
     if (opened) {
         COM->close();
         QFont font2;
-        font2.setFamilies({ QString::fromUtf8("Share-TechMono") });
+        font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
         font2.setPointSize(16);
-        font2.setBold(false);
+        font2.setBold(true);
         font2.setKerning(true);
         ui->label_serialConnection->setFont(font2);
         ui->label_serialConnection->setStyleSheet("color:red;");
@@ -249,20 +251,28 @@ void Choose::closeSerial() {
 
 void Choose::clearSerialReceive() {
     qDebug() << "\nclearSerialReceive(){";
-	ui->textEdit_serialreceive->clear();
+
+	/*ui->textEdit_serialreceive->clear();
     rx_number = 0;
-    ui->label_number->setText(QString::number(rx_number));
+    ui->label_number->setText(QString::number(rx_number));*/
+
     qDebug() << "}";
 }
 
 void Choose::dataOpen() {
     qDebug() << "\ndataOpen(){";
 
+    /*QString sendData = ui->textEdit_serialsend->toPlainText();
+    sendData += "\r\n";
+    COM->write(sendData.toLatin1());*/
+
     qDebug() << "}";
 }
 
 void Choose::dataClose() {
     qDebug() << "\ndataClose(){";
+
+
 
     qDebug() << "}";
 }
@@ -275,7 +285,7 @@ void Choose::serialRest() {
         QFont font2;
         font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
         font2.setPointSize(16);
-        font2.setBold(false);
+        font2.setBold(true);
         font2.setKerning(true);
         ui->label_serialConnection->setFont(font2);
         ui->label_serialConnection->setStyleSheet("color:red;");
@@ -285,7 +295,7 @@ void Choose::serialRest() {
     QFont font2;
     font2.setFamilies({ QString::fromUtf8("Maple Mono NF CN") });
     font2.setPointSize(16);
-    font2.setBold(false);
+    font2.setBold(true);
     font2.setKerning(true);
     ui->label_serialConnection->setFont(font2);
     ui->label_serialConnection->setStyleSheet("color:red;");

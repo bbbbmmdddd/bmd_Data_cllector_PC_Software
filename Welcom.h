@@ -14,6 +14,7 @@ public:
     ~Welcom();
     Choose* ppage2 = NULL;
 	Choose_Low* ppage_low= NULL;
+    static bool fast;
 
 private slots:
     void comboBox_change();

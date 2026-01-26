@@ -670,7 +670,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
          <font>
           <family>Maple Mono NF CN</family>
           <pointsize>16</pointsize>
-          <bold>false</bold>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">

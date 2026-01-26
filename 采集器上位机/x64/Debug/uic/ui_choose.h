@@ -332,7 +332,11 @@ public:
 
         label_serialConnection = new QLabel(formLayoutWidget_2);
         label_serialConnection->setObjectName("label_serialConnection");
-        label_serialConnection->setFont(font1);
+        QFont font9;
+        font9.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
+        font9.setPointSize(16);
+        font9.setBold(true);
+        label_serialConnection->setFont(font9);
         label_serialConnection->setStyleSheet(QString::fromUtf8("color:red;"));
         label_serialConnection->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
@@ -397,11 +401,11 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(pushButton_DataOpen->sizePolicy().hasHeightForWidth());
         pushButton_DataOpen->setSizePolicy(sizePolicy);
-        QFont font9;
-        font9.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
-        font9.setPointSize(14);
-        font9.setBold(false);
-        pushButton_DataOpen->setFont(font9);
+        QFont font10;
+        font10.setFamilies({QString::fromUtf8("Maple Mono NF CN")});
+        font10.setPointSize(14);
+        font10.setBold(false);
+        pushButton_DataOpen->setFont(font10);
         pushButton_DataOpen->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataOpen);
@@ -410,7 +414,7 @@ public:
         pushButton_DataClose->setObjectName("pushButton_DataClose");
         sizePolicy.setHeightForWidth(pushButton_DataClose->sizePolicy().hasHeightForWidth());
         pushButton_DataClose->setSizePolicy(sizePolicy);
-        pushButton_DataClose->setFont(font9);
+        pushButton_DataClose->setFont(font10);
         pushButton_DataClose->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataClose);
@@ -419,7 +423,7 @@ public:
         pushButton_DataTest->setObjectName("pushButton_DataTest");
         sizePolicy.setHeightForWidth(pushButton_DataTest->sizePolicy().hasHeightForWidth());
         pushButton_DataTest->setSizePolicy(sizePolicy);
-        pushButton_DataTest->setFont(font9);
+        pushButton_DataTest->setFont(font10);
         pushButton_DataTest->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton_DataTest);
@@ -427,11 +431,11 @@ public:
         label_date_3 = new QLabel(widget);
         label_date_3->setObjectName("label_date_3");
         label_date_3->setGeometry(QRect(0, 1040, 281, 41));
-        QFont font10;
-        font10.setFamilies({QString::fromUtf8("Share-TechMono")});
-        font10.setPointSize(15);
-        font10.setBold(false);
-        label_date_3->setFont(font10);
+        QFont font11;
+        font11.setFamilies({QString::fromUtf8("Share-TechMono")});
+        font11.setPointSize(15);
+        font11.setBold(false);
+        label_date_3->setFont(font11);
         label_date_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         retranslateUi(Choose);
